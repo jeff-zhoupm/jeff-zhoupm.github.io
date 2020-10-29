@@ -587,8 +587,19 @@
 
         let carouselIntervalId;
         
+        // Loop to call the next cover article picture.
+        let autoCarousel = function () {
+            carouselIntervalId = setInterval(function () {
+                coverSlider.carousel('next');
+            }, 5000);
+        };
+        autoCarousel();
+        
 
         function restartPlay() {
+            
+            clearInterval(carouselIntervalId);
+            autoCarousel();
             
         };
 
@@ -664,7 +675,7 @@
             volume: Number('0.7'),
             listFolded: 'false' === 'true',
             listMaxHeight: '197px',
-            audio: JSON.parse('[{"name":"Shape of You","artist":"J.Fla","url":"http://xxx.com/music3.mp3","cover":"http://xxx.com/music-cover3.png"},{"name":"Take me hand","artist":"DAISHI DANCE,Cecile Corbel","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"五月雨变奏电音","artist":"AnimeVibe","url":"http://xxx.com/music1.mp3","cover":"http://xxx.com/music-cover1.png"}]')
+            audio: JSON.parse('[{"name":"交换余生","artist":"林俊杰","url":"/medias/music/music1.mp3","cover":"/medias/music/cover1.png"},{"name":"Something Just Like This (Megamix)","artist":"AnDyWuMUSICLAND","url":"/medias/music/music2.mp3","cover":"/medias/music/cover2.png"},{"name":"你是我的女朋友（翻自 小右）","artist":"药水哥","url":"/medias/music/music3.mp3","cover":"/medias/music/cover3.png"}]')
         });
     });
 </script>
@@ -699,7 +710,7 @@
             preload: 'auto',
             volume: Number('0.7'),
             video: {
-                url: 'https://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4',
+                url: '/medias/vadio/kobe.mp4',
                 pic: '',
                 thumbnails: ''
             }
@@ -732,7 +743,7 @@
                             <div class="card-image">
                                 
                                     
-                                    <img src="/medias/featureimages/1.jpg" class="responsive-img" alt="本博客搭建详细教程">
+                                    <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="本博客搭建详细教程">
                                 
                                 <span class="card-title">本博客搭建详细教程</span>
                             </div>
@@ -1013,7 +1024,7 @@
 
 
 <script>if ('serviceWorker' in navigator) {
-  navigator.serviceWorker.register('/sw.js?t=1603790945240')
+  navigator.serviceWorker.register('/sw.js?t=1603965101206')
     .then(function () {console.log('ServiceWorker Register Successfully.')})
     .catch(function (e) {console.error(e)});
 }
@@ -1038,5 +1049,5 @@
             }
           }
         });
-        </script></body>
+        </script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"log":false,"model":{"jsonPath":"/live2dw/assets/shizuku.model.json"},"display":{"position":"left","width":225,"height":300},"mobile":{"show":false},"react":{"opacity":0.7}});</script></body>
 </html>
